@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/style/sidebars.css" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <div
+        class="nav-menu d-flex flex-column h-100 flex-shrink-0 p-3 bg-white d-none"
+      >
+        <header class="d-flex fixed-top justify-content-start bg-white">
+          <img
+            class="img-fluid pointer"
+            src="./assets/img/Close.png"
+            alt=""
+            srcset=""
+            onclick="hideMenu()"
+          />
+        </header>
+        <div class="d-flex mb-2">
+          <button
+            class="bg-white pb-1 border border-top-0 border-start-0 border-end-0 border-black women"
+            onclick="showTab('women')"
+          >
+            Women
+          </button>
+          <button class="bg-white pb-1 border-0 men" onclick="showTab('men')">
+            Men
+          </button>
+          <button class="bg-white pb-1 border-0 kids" onclick="showTab('kids')">
+            Kids
+          </button>
+        </div>
+        <ul class="nav-list list-unstyled ps-0 women-tab d-none">
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#home-collapse"
+              aria-expanded="false"
+            >
+              New
+            </button>
+            <div class="collapse" id="home-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">Overview</a></li>
+                <li><a href="#" class="link-dark rounded">Updates</a></li>
+                <li><a href="#" class="link-dark rounded">Reports</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#dashboard-collapse"
+              aria-expanded="false"
+            >
+              Apparel
+            </button>
+            <div class="collapse" id="dashboard-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">Outer</a></li>
+                <li><a href="#" class="link-dark rounded">Dress</a></li>
+                <li>
+                  <a href="#" class="link-dark rounded">Blouse/Shirt</a>
+                </li>
+                <li><a href="#" class="link-dark rounded">T-Shirt</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#bag-collapse"
+              aria-expanded="false"
+            >
+              Bag
+            </button>
+            <div class="collapse" id="bag-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New</a></li>
+                <li><a href="#" class="link-dark rounded">Processed</a></li>
+                <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                <li><a href="#" class="link-dark rounded">Returned</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#shoes-collapse"
+              aria-expanded="false"
+            >
+              Shoes
+            </button>
+            <div class="collapse" id="shoes-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New</a></li>
+                <li><a href="#" class="link-dark rounded">Processed</a></li>
+                <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                <li><a href="#" class="link-dark rounded">Returned</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#beauty-collapse"
+              aria-expanded="false"
+            >
+              Beauty
+            </button>
+            <div class="collapse" id="beauty-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New</a></li>
+                <li><a href="#" class="link-dark rounded">Processed</a></li>
+                <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                <li><a href="#" class="link-dark rounded">Returned</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#accessories-collapse"
+              aria-expanded="false"
+            >
+              Accessories
+            </button>
+            <div class="collapse" id="accessories-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New</a></li>
+                <li><a href="#" class="link-dark rounded">Processed</a></li>
+                <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                <li><a href="#" class="link-dark rounded">Returned</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="border-top my-3"></li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#account-collapse"
+              aria-expanded="false"
+            >
+              Account
+            </button>
+            <div class="collapse" id="account-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New...</a></li>
+                <li><a href="#" class="link-dark rounded">Profile</a></li>
+                <li><a href="#" class="link-dark rounded">Settings</a></li>
+                <li><a href="#" class="link-dark rounded">Sign out</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <ul class="nav-list list-unstyled ps-0 men-tab d-none">
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#home-collapse"
+              aria-expanded="false"
+            >
+              New
+            </button>
+            <div class="collapse" id="home-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">Overview</a></li>
+                <li><a href="#" class="link-dark rounded">Updates</a></li>
+                <li><a href="#" class="link-dark rounded">Reports</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#bag-collapse"
+              aria-expanded="false"
+            >
+              Bag
+            </button>
+            <div class="collapse" id="bag-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New</a></li>
+                <li><a href="#" class="link-dark rounded">Processed</a></li>
+                <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                <li><a href="#" class="link-dark rounded">Returned</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#shoes-collapse"
+              aria-expanded="false"
+            >
+              Shoes
+            </button>
+            <div class="collapse" id="shoes-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New</a></li>
+                <li><a href="#" class="link-dark rounded">Processed</a></li>
+                <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                <li><a href="#" class="link-dark rounded">Returned</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#beauty-collapse"
+              aria-expanded="false"
+            >
+              Beauty
+            </button>
+            <div class="collapse" id="beauty-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New</a></li>
+                <li><a href="#" class="link-dark rounded">Processed</a></li>
+                <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                <li><a href="#" class="link-dark rounded">Returned</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#accessories-collapse"
+              aria-expanded="false"
+            >
+              Accessories
+            </button>
+            <div class="collapse" id="accessories-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New</a></li>
+                <li><a href="#" class="link-dark rounded">Processed</a></li>
+                <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                <li><a href="#" class="link-dark rounded">Returned</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="border-top my-3"></li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#account-collapse"
+              aria-expanded="false"
+            >
+              Account
+            </button>
+            <div class="collapse" id="account-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New...</a></li>
+                <li><a href="#" class="link-dark rounded">Profile</a></li>
+                <li><a href="#" class="link-dark rounded">Settings</a></li>
+                <li><a href="#" class="link-dark rounded">Sign out</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <ul class="nav-list list-unstyled ps-0 kids-tab d-none">
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#home-collapse"
+              aria-expanded="false"
+            >
+              New
+            </button>
+            <div class="collapse" id="home-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">Overview</a></li>
+                <li><a href="#" class="link-dark rounded">Updates</a></li>
+                <li><a href="#" class="link-dark rounded">Reports</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#dashboard-collapse"
+              aria-expanded="false"
+            >
+              Apparel
+            </button>
+            <div class="collapse" id="dashboard-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">Outer</a></li>
+                <li><a href="#" class="link-dark rounded">Dress</a></li>
+                <li>
+                  <a href="#" class="link-dark rounded">Blouse/Shirt</a>
+                </li>
+                <li><a href="#" class="link-dark rounded">T-Shirt</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#bag-collapse"
+              aria-expanded="false"
+            >
+              Bag
+            </button>
+            <div class="collapse" id="bag-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New</a></li>
+                <li><a href="#" class="link-dark rounded">Processed</a></li>
+                <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                <li><a href="#" class="link-dark rounded">Returned</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#shoes-collapse"
+              aria-expanded="false"
+            >
+              Shoes
+            </button>
+            <div class="collapse" id="shoes-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New</a></li>
+                <li><a href="#" class="link-dark rounded">Processed</a></li>
+                <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                <li><a href="#" class="link-dark rounded">Returned</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#beauty-collapse"
+              aria-expanded="false"
+            >
+              Beauty
+            </button>
+            <div class="collapse" id="beauty-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New</a></li>
+                <li><a href="#" class="link-dark rounded">Processed</a></li>
+                <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                <li><a href="#" class="link-dark rounded">Returned</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#accessories-collapse"
+              aria-expanded="false"
+            >
+              Accessories
+            </button>
+            <div class="collapse" id="accessories-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New</a></li>
+                <li><a href="#" class="link-dark rounded">Processed</a></li>
+                <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                <li><a href="#" class="link-dark rounded">Returned</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="border-top my-3"></li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#account-collapse"
+              aria-expanded="false"
+            >
+              Account
+            </button>
+            <div class="collapse" id="account-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#" class="link-dark rounded">New...</a></li>
+                <li><a href="#" class="link-dark rounded">Profile</a></li>
+                <li><a href="#" class="link-dark rounded">Settings</a></li>
+                <li><a href="#" class="link-dark rounded">Sign out</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="wrapper p-3 mb-5 main-view">
+        <header class="d-flex fixed-top justify-content-between bg-white">
+          <button class="menu-btn bg-white border-0" onclick="openMenu()">
+            <img src="./assets/img/Menu.png" alt="" />
+          </button>
+
+          <div class="d-flex justify-content-center">
+            <img src="./assets/img/Group.png" alt="logo" />
+          </div>
+
+          <div>
+            <img
+              class="img-fluid me-1 pointer"
+              src="./assets/img/Search.png"
+              alt=""
+            />
+            <img
+              class="img-fluid pointer"
+              src="./assets/img/shopping bag.png"
+              alt=""
+              onclick="openCart()"
+            />
+          </div>
+        </header>
+        <section class="d-flex flex-column justify-content-center mt-4">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <img
+                class="img-fluid item-img"
+                src="./assets/img/Rectangle 344.png"
+                alt="image"
+              />
+            </div>
+            <div class="item">
+              <img
+                class="img-fluid"
+                src="./assets/img/Rectangle 344.png"
+                alt="image"
+              />
+            </div>
+            <div class="item">
+              <img
+                class="img-fluid"
+                src="./assets/img/Rectangle 344.png"
+                alt="image"
+              />
+            </div>
+          </div>
+          <div class="item-info">
+            <p class="item-title">mohan</p>
+            <p class="item-material">Recycle Boucle Knit Cardigan Pink</p>
+            <p class="item-price">120</p>
+          </div>
+          <div
+            class="color-size d-flex justify-content-between align-items-center"
+          >
+            <div class="color-selector d-flex align-items-center">
+              <p class="item-color mb-0 me-2">Color</p>
+              <div
+                class="color-btn rounded-circle me-1 active"
+                onclick="colorToggle(this)"
+              ></div>
+              <div
+                class="color-btn rounded-circle me-1"
+                onclick="colorToggle(this)"
+              ></div>
+              <div
+                class="color-btn rounded-circle me-1"
+                onclick="colorToggle(this)"
+              ></div>
+            </div>
+            <div class="size-selector d-flex align-items-center">
+              <p class="item-size mx-2">Size</p>
+              <p
+                class="size-btn rounded-circle border border-1 border-dark bg-black text-white me-1"
+                onclick="sizeToggle(this)"
+              >
+                S
+              </p>
+              <p
+                class="size-btn rounded-circle border border-1 border-dark me-1"
+                onclick="sizeToggle(this)"
+              >
+                M
+              </p>
+              <p
+                class="size-btn rounded-circle border border-1 border-dark"
+                onclick="sizeToggle(this)"
+              >
+                L
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="bg-black p-2 d-block fixed-bottom text-white">
+        <div
+          class="add-basket d-flex justify-content-between align-items-center"
+        >
+          <div class="add-basket-btn" onclick="addItem()">
+            <i class="fa fa-plus p-1 pointer"></i>
+            <span>ADD TO BASKET</span>
+          </div>
+          <i class="fa fa-heart"></i>
+        </div>
+        <div
+          class="item-counter d-none justify-content-center align-items-center"
+        >
+          <i
+            class="fa fa-minus rounded-circle border-light border-1 border me-2 p-1 plus-btn pointer"
+            onclick="removeItem()"
+          ></i>
+          <span class="me-2">NUMBER</span>
+          <i
+            class="fa fa-plus rounded-circle border-light border-1 border p-1 minus-btn pointer"
+            onclick="addItem()"
+          ></i>
+        </div>
+      </footer>
+    </div>
+
+    <div class="cart-wrapper d-none">
+      <div class="d-flex fixed-top bg-white">
+        <img
+          class="img-fluid h-100 pointer"
+          src="./assets/img/Close.png"
+          alt=""
+          srcset=""
+          onclick="closeCart()"
+        />
+      </div>
+      <div class="cart mt-5 p-3 pt-0">
+        <p class="cart-title">cart</p>
+        <div class="cart-items d-flex flex-column"></div>
+        <div class="cart-empty d-none">
+          <p class="empty-text">You have no items in your Shopping Bag.</p>
+        </div>
+      </div>
+
+      <div
+        class="sub-total-wrapper d-none justify-content-center flex-column fixed-bottom bg-white p-3"
+      >
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="sub-total-text">sub total</p>
+          <p class="sub-total-number"></p>
+        </div>
+        <p class="disclamer-text">
+          *shipping charges, taxes and discount codes are calculated at the time
+          of accounting.
+        </p>
+      </div>
+      <div class="action-wrapper">
+        <footer class="bg-black p-2 d-block fixed-bottom text-white">
+          <div
+            class="buy-now-wrapper d-flex justify-content-center align-items-center"
+          >
+            <img
+              class="img-fluid me-4"
+              src="./assets/img/shopping bag-1.png"
+              alt=""
+            />
+            <span class="buy-now-text">Buy Now</span>
+          </div>
+          <div
+            class="continue-shopping-wrapper d-flex justify-content-center align-items-center d-none"
+          >
+            <img
+              class="img-fluid me-4"
+              src="./assets/img/shopping bag-1.png"
+              alt=""
+            />
+            <span class="continue-shopping-text">Buy Now</span>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <script src="./script/main.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel();
+      });
+
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: false,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 1,
+          },
+          1000: {
+            items: 1,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
